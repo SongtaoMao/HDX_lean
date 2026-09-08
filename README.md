@@ -1,5 +1,7 @@
 # Abelian Cayley High-Dimensional Expanders with Polylogarithmic Degree
 
+[![Lean proof verification](https://github.com/SongtaoMao/HDX_lean/actions/workflows/lean.yml/badge.svg?branch=main)](https://github.com/SongtaoMao/HDX_lean/actions/workflows/lean.yml)
+
 Lean 4 formalization of the mathematical constructions in the paper, covering
 both main theorems and their supporting arguments in Sections 2–5.
 Cited external results are explicit mathematical inputs; their proofs are
@@ -22,9 +24,18 @@ lake build
 and dependencies. Do not update these pins merely to reproduce the development.
 The repository contains source files, not precompiled build artifacts.
 
-Targeted checks of the main entry points and new construction modules have
-passed. A clean full build of this published snapshot has not yet been
-recorded; publication itself is not a verification certificate.
+## Verification status
+
+The badge above reports the actual GitHub Actions result for `main`. A green
+**passing** result means the entire `HDXLean` library compiled and its logical
+dependencies passed an axiom audit allowing only `propext`, `Classical.choice`,
+and `Quot.sound`. The workflow also rejects unfinished proof markers and global
+axiom declarations in project sources. Click the badge for the exact verified
+commit, build log, and result summary.
+
+This certifies the Lean proofs relative to their explicitly stated cited
+inputs, not independent proofs of those inputs or of the excluded algorithmic
+claims. A pending or failing badge is not a successful verification result.
 
 ## Main entry points
 

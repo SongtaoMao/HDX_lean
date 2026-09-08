@@ -1,0 +1,57 @@
+name: Lean proof verification
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: lean-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    name: Build all proofs and audit axioms
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      LEAN_NUM_THREADS: "2"
+    steps:
+      - name: Check out the exact source revision
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Reject unfinished proof markers
+        shell: bash
+        run: |
+          if grep -RInE --include='*.lean' '\b(sorry|admit)\b|^[[:space:]]*axiom[[:space:]]' HDXLean HDXLean.lean; then
+            echo 'Unfinished proof marker or global axiom declaration found.'
+            exit 1
+          fi
+      - name: Build the full library and check logical dependencies
+        uses: leanprover/lean-action@50fcf42d2e460296f1a34b402e990d1b24f8b596 # v1
+        with:
+          auto-config: false
+          build: true
+          build-args: HDXLean
+          use-mathlib-cache: true
+          axiom-audit: true
+          axiom-audit-root: HDXLean
+          axiom-audit-allow: propext,Classical.choice,Quot.sound
+      - name: Record verification result
+        shell: bash
+        run: |
+          {
+            echo '## Lean proof verification passed'
+            echo
+            echo "Verified source revision: $GITHUB_SHA"
+            echo
+            echo '- The entire HDXLean library compiled with the pinned toolchain and dependencies.'
+            echo '- The axiom audit permitted only propext, Classical.choice, and Quot.sound.'
+            echo '- Cited literature statements remain explicit theorem inputs, not independently proved results.'
+            echo '- Algorithmic explicitness and computational complexity are outside the formalized scope.'
+          } >> "$GITHUB_STEP_SUMMARY"
