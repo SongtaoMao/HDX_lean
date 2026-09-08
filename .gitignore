@@ -1,0 +1,7 @@
+/.lake/
+/build/
+/tmp/
+*.olean
+*.ilean
+*.log
+

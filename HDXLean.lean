@@ -1,0 +1,106 @@
+import HDXLean.Asymptotics
+import HDXLean.AffineRelation
+import HDXLean.AffineRelationAdjacency
+import HDXLean.AffineRelationCertificate
+import HDXLean.AffineRelationCombinatorics
+import HDXLean.AffineRelationKernel
+import HDXLean.AffineRelationSpectrum
+import HDXLean.AlgebraicGeometry
+import HDXLean.AlgebraicGeometryCauchyBinet
+import HDXLean.AlgebraicGeometryConcrete
+import HDXLean.CanonicalMaximalMinors
+import HDXLean.EvaluationMultiplication
+import HDXLean.OneGenericMatrix
+import HDXLean.PolynomialMinorBridge
+import HDXLean.RiemannRochEvaluation
+import HDXLean.SectionFourCanonicalMinors
+import HDXLean.SectionFourAssembly
+import HDXLean.ScalarExtensionGenericity
+import HDXLean.EvaluationProductRealization
+import HDXLean.CurveRiemannRochCited
+import HDXLean.CurveRiemannRochLevel
+import HDXLean.CurveTowerAssembly
+import HDXLean.SectionFourSubspaces
+import HDXLean.TowerPointCapacity
+import HDXLean.Basic
+import HDXLean.BinaryCoordinates
+import HDXLean.BooleanCube
+import HDXLean.BooleanCubeMinorExpansion
+import HDXLean.CharTwoTriples
+import HDXLean.ConditionedLinkWeights
+import HDXLean.Directions
+import HDXLean.Families
+import HDXLean.FiniteFieldTrace
+import HDXLean.FiniteFourierBasis
+import HDXLean.FiniteRegularSpectrum
+import HDXLean.GolowichProduct
+import HDXLean.GolowichCited
+import HDXLean.HigherDimensionalAssembly
+import HDXLean.KernelDistance
+import HDXLean.MainTheorem
+import HDXLean.MainTheoremCited
+import HDXLean.ParameterChoice
+import HDXLean.OptimalDegreeCited
+import HDXLean.ProductGlobalGap
+import HDXLean.ProductExactSpectrum
+import HDXLean.Relabeling
+import HDXLean.RevisedQuantitative
+import HDXLean.SkeletonWeights
+import HDXLean.SectionFiveFormalized
+import HDXLean.RelationMatrix
+import HDXLean.RelationQuotient
+import HDXLean.RelationTriangleComplex
+import HDXLean.RelationQuotientCoordinates
+import HDXLean.RelationTriangleCodegree
+import HDXLean.EdgeCodegreeRelabel
+import HDXLean.RelationCodegreeCoordinates
+import HDXLean.RelationQuotientConnected
+import HDXLean.RelationVertexLinkCount
+import HDXLean.RelationVertexLink
+import HDXLean.RelationVertexLinkCoordinates
+import HDXLean.RelationCompilerAssembly
+import HDXLean.SectionThreeArithmetic
+import HDXLean.SectionThreeAsymptotics
+import HDXLean.SectionThreeFamily
+import HDXLean.SquareFieldDimension
+import HDXLean.SpectralArithmetic
+import HDXLean.TheoremOneOne
+import HDXLean.TheoremOneOneOuter
+import HDXLean.TheoremOneTwo
+import HDXLean.TwoDimensional
+import HDXLean.TwoDimensionalIndexed
+import HDXLean.VertexLinkMass
+import HDXLean.WeightedGraphScaling
+import HDXLean.WeightedLiftAsymptotics
+import HDXLean.WeightedLiftCayley
+import HDXLean.WeightedLiftCaseBounds
+import HDXLean.WeightedLiftCodimensionTwo
+import HDXLean.WeightedLiftGenerators
+import HDXLean.WeightedLiftInsertion
+import HDXLean.WeightedLiftLinks
+import HDXLean.WeightedLiftMeasure
+import HDXLean.WeightedLiftOccupancy
+import HDXLean.WeightedLiftOneFiberBridge
+import HDXLean.WeightedLiftOneFiberSpectrum
+import HDXLean.WeightedLiftParentSums
+import HDXLean.WeightedLiftSpectrum
+import HDXLean.WeightedLiftThreeFiber
+import HDXLean.WeightedLiftThreeFiberBridge
+import HDXLean.WeightedLiftTopFaces
+import HDXLean.WeightedLiftTranslation
+import HDXLean.WeightedLiftTwoFiberBridge
+import HDXLean.WeightedLiftTwoFiberSpectrum
+import HDXLean.WeightedLiftWeights
+
+/-!
+# Abelian Cayley HDXs with polylogarithmic degree
+
+Umbrella import for the full-paper development of `main.pdf`, including
+retained historical modules. The reader-facing entry point for BOTH main
+family conclusions is `HDXLean.Paper.conditionalMainTheorems` in
+`HDXLean/MainTheorem.lean`. Import that module for the main theorem API.
+
+The presence of a module in this umbrella is not a claim that every paper
+statement is proved. `PAPER_MAP.md` distinguishes internal proofs, supplied
+inputs, unresolved formalization, and out-of-scope algorithmic claims.
+-/
