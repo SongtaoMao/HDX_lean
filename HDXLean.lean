@@ -95,12 +95,12 @@ import HDXLean.WeightedLiftWeights
 /-!
 # Abelian Cayley HDXs with polylogarithmic degree
 
-Umbrella import for the full-paper development of `main.pdf`, including
-retained historical modules. The reader-facing entry point for BOTH main
-family conclusions is `HDXLean.Paper.conditionalMainTheorems` in
-`HDXLean/MainTheorem.lean`. Import that module for the main theorem API.
+Umbrella import for the full-paper development, including retained historical
+modules. The reader-facing entry point for both main family conclusions is
+`HDXLean.Paper.mainTheorems_from_cited_data` in
+`HDXLean/MainTheoremCited.lean`. The earlier interfaces remain available.
 
 The presence of a module in this umbrella is not a claim that every paper
-statement is proved. `PAPER_MAP.md` distinguishes internal proofs, supplied
-inputs, unresolved formalization, and out-of-scope algorithmic claims.
+statement is proved. `README.md` describes the proved implications, cited
+inputs, and out-of-scope algorithmic claims.
 -/

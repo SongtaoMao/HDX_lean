@@ -26,6 +26,11 @@ The repository contains source files, not precompiled build artifacts.
 
 ## Verification status
 
+**Verified on GitHub.** The [full verification run](https://github.com/SongtaoMao/HDX_lean/actions/runs/34245835534)
+successfully compiled all 106 library modules and audited 3,905 declarations
+under the `HDXLean` namespace. Every audited declaration used only the
+allowlisted standard axioms. This is a declaration count, not a theorem count.
+
 The badge above reports the actual GitHub Actions result for `main`. A green
 **passing** result means the entire `HDXLean` library compiled and its logical
 dependencies passed an axiom audit allowing only `propext`, `Classical.choice`,

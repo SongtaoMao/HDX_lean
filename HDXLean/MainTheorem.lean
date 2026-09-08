@@ -9,14 +9,12 @@ two-dimensional), and Theorem 1.3 (weighted higher-dimensional). Historical
 module/declaration names are retained for compatibility. Use `theorem_1_2`
 and `theorem_1_3` below for the current manuscript numbering.
 
-REPAIR STATUS: the empty-matrix compiler defect found in the final audit has
-been repaired by requiring nonempty columns, derived at every call site.
-`Checks/FinalAudit20260908.lean` retains the contradiction only against an
-explicitly historical unrestricted type. The full quotient-to-compiler
-adapter and actual-curve Section 4 instantiation remain unfinished; these
-wrappers must not be advertised as a complete citation-only verification.
-New exact Section 5 spectrum theorems are in `ProductExactSpectrum` under
-their separate, precise literature inputs. See `PROOF_COMPLETION_2026-09-08.md`.
+This module retains the earlier assumption interfaces. The newer
+`MainTheoremCited` module constructs the quotient-to-compiler and Section 4
+adapters from explicit cited data and calls these proofs unchanged. The
+compiler requires nonempty columns, derived at every call site. Exact
+Section 5 spectrum theorems are in `ProductExactSpectrum` under their separate
+literature inputs.
 
 This module exposes both main mathematical family conclusions of `main.pdf`.
 It assembles existing proofs; it does not add a new literature assumption or
@@ -24,14 +22,14 @@ assert that every lemma, example, or discussion claim has been formalized.
 
 The two-dimensional path takes the existing tower, Section 4, trace, and
 relation-compiler interfaces. In particular, `ConcreteSectionFourInput`
-still supplies geometric level and matrix/minor data: a minimal citation-only
-audit of that boundary remains separate work. The higher-dimensional path
-takes only the two stated Golowich product inputs. Neither path formalizes
-algorithmic explicitness or complexity, as requested by the user.
+supplies geometric level and matrix/minor data; `MainTheoremCited` assembles
+that interface through the common cited curve/Riemann–Roch model. The
+higher-dimensional path takes the two stated Golowich product inputs.
+Neither path formalizes algorithmic explicitness or complexity.
 
 The actual global-gap identification and the separately cited optimal-degree
-comparison are not assertions of `MainConclusions`. See `PAPER_MAP.md` and
-`FORMALIZATION_GUIDE.md` for the full-paper coverage and premise inventory.
+comparison are not assertions of `MainConclusions`. See `README.md` for the
+formalization scope and premise inventory.
 -/
 
 namespace HDXLean.Paper
